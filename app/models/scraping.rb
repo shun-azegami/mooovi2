@@ -4,7 +4,7 @@ class Scraping
 
     links = []
     agent = Mechanize.new
-    current_page = agent.get("http://review-movie.herokuapp.com/")
+    current_page = agent.get("http://review-movie.herokuapp.com/" + next_url)
     elements = current_page.search('.entry-title a').each do |ele|
       links << ele[:href]
     end
