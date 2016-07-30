@@ -1,6 +1,6 @@
 class Scraping
 
-  def movie_url
+  def self.movie_urls
 
     links = []
     agent = Mechanize.new
@@ -15,17 +15,17 @@ class Scraping
 
   end
 
-  def get_product(link)
+  def self.get_product(link)
 
     agent = Mechanize.new
     page = agent.get(link)
     title = page.at('.entry-title').inner_text
     image_url = page.at('.entry-content img')[:src] if page.at('.entry-content img')
     director = page.at('.director span').inner_text
-    detail = page.at('.entry-content p'),inner_text
+    detail = page.at('.entry-content p').inner_text
     open_date = page.at('.date span').inner_text
 
-    product = Product.new(title: title, image_url: image_url, director: director, detail: detail, open_date: open_date)
+    product = Product.where(title: title, image_url: image_url).first_or_initialize
     product.save
 
   end
