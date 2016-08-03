@@ -1,2 +1,15 @@
 class ReviewsController < ApplicationController
+  def new
+    @product = Product.find(params[:product_id])
+    @review = Review.new
+  end
+
+  def create
+    Review.create(create_params)
+  end
+
+  private
+  def create_params
+    params.require(:review).permit(:nickname, :rate, :review)
+  end
 end
