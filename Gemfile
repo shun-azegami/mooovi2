@@ -45,3 +45,7 @@ end
 gem 'pry-rails'
 
 gem 'mechanize'
+
+gem 'kaminari'
+
+gem 'devise'
