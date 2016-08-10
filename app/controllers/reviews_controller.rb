@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
 
   def create
     Review.create(create_params)
+    redirect_to controller: :products, action: :index
   end
 
   private
