@@ -7612,3 +7612,65 @@ ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie
 
 
 Started GET "/assets/bambi-1.0.0.ttf?20140712" for 127.0.0.1 at 2016-08-10 23:57:10 +0900
+
+
+Started GET "/products/3" for 127.0.0.1 at 2016-08-11 00:00:15 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.7ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+  Rendered products/show.html.erb within layouts/review_site (1.7ms)
+Completed 200 OK in 43ms (Views: 28.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-08-11 00:00:25 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for 127.0.0.1 at 2016-08-11 00:00:25 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for 127.0.0.1 at 2016-08-11 00:00:25 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2016-08-11 00:00:25 +0900
+
+
+Started GET "/products/3" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mReview Load (0.5ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE `reviews`.`product_id` = 3
+  Rendered products/show.html.erb within layouts/review_site (120.6ms)
+Completed 200 OK in 138ms (Views: 102.9ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-08-11 00:05:33 +0900
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for 127.0.0.1 at 2016-08-11 00:05:34 +0900
