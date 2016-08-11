@@ -18,9 +18,14 @@
                     <h3 class="text-xsmall text-overflow" title="<%= product.id %>">
                       <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= product.title %></h3>
                     <p class="text-small">
+                    <% if product.reviews.present? %>
                       <span class="rating-star">
-                        <i class="star-actived rate-[ここに評価を表示]0"></i>
+                        <i class="star-actived rate-<%= product.reviews.average(:rate).round %>0"></i>
+                    <% else %>
+                      <span class="rating-star">
+                        <i class="star-actived rate-0"></i>
                       </span>
+                    <% end %>
                     </p>
                   </div>
                 </li>
